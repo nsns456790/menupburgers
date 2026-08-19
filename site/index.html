@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>menup · برجر مكة الطازج</title>
+<meta name="description" content="menup في مكة المكرمة. برجر لحم طازج يُطحن ويُشكّل كل صباح، مشوي على اللهب، يوصلك حار في العزيزية والششة والشرائع. اطلب على واتساب.">
+<meta name="theme-color" content="#17100E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:title" content="menup · برجر مكة الطازج">
+<meta property="og:description" content="برجر مكة الطازج. لحم يُطحن كل صباح، مشوي على اللهب، يوصلك حار. اطلب على واتساب.">
+<meta property="og:image" content="assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="برجر menup مركّب من طبقاته على خلفية داكنة">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/v15-00b30d.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/v16-34b602.woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"menup",
+  "servesCuisine":"برجر",
+  "priceRange":"$$",
+  "image":"assets/og.jpg",
+  "address":{"@type":"PostalAddress","streetAddress":"شارع الحج، حي العزيزية","addressLocality":"مكة المكرمة","addressCountry":"SA"},
+  "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"12:00","closes":"02:00"}],
+  "hasMenu":{"@type":"Menu","hasMenuSection":{"@type":"MenuSection","name":"البرجر","hasMenuItem":[
+    {"@type":"MenuItem","name":"الكلاسيكي من menup","offers":{"@type":"Offer","price":"29","priceCurrency":"SAR"}},
+    {"@type":"MenuItem","name":"دبل تشيز على اللهب","offers":{"@type":"Offer","price":"42","priceCurrency":"SAR"}},
+    {"@type":"MenuItem","name":"سبايسي بافلو","offers":{"@type":"Offer","price":"35","priceCurrency":"SAR"}},
+    {"@type":"MenuItem","name":"دجاج مقرمش بالعسل الحار","offers":{"@type":"Offer","price":"32","priceCurrency":"SAR"}},
+    {"@type":"MenuItem","name":"بطاطس menup بالجبن","offers":{"@type":"Offer","price":"18","priceCurrency":"SAR"}},
+    {"@type":"MenuItem","name":"ميلك شيك تمر ومكسرات","offers":{"@type":"Offer","price":"21","priceCurrency":"SAR"}}
+  ]}}
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#menu">تخطَّ إلى المنيو</a>
+
+<!-- ===== طبقة البيئة الثابتة ===== -->
+<div class="env" aria-hidden="true">
+  <div class="env__glow" id="envGlow"></div>
+  <div class="env__tile"></div>
+  <div class="env__grain"></div>
+  <div class="env__vig"></div>
+</div>
+
+<!-- ===== شريط التنقل ===== -->
+<nav class="nav" id="nav">
+  <a class="nav__mark" href="#top">
+    <svg viewBox="0 0 40 40" aria-hidden="true">
+      <path d="M6 22h28c0 5-6 8-14 8S6 27 6 22Z" fill="#D6402F"/>
+      <rect x="5" y="17" width="30" height="5" rx="2.5" fill="#F0B23C"/>
+      <path d="M6 15c0-6 6-10 14-10s14 4 14 10c0 1.5-1 2-2 2H8c-1 0-2-.5-2-2Z" fill="#E8A951"/>
+      <circle cx="14" cy="10" r="1.3" fill="#FFF3DC"/><circle cx="21" cy="8.4" r="1.3" fill="#FFF3DC"/><circle cx="27" cy="11" r="1.3" fill="#FFF3DC"/>
+    </svg>
+    <span class="js-name wordmark">menup</span>
+  </a>
+  <div class="nav__links">
+    <a href="#menu">المنيو</a>
+    <a href="#why">ليش احنا</a>
+    <a href="#build">ابنِ برجرك</a>
+    <a href="#spots">الفروع</a>
+    <a href="#faq">أسئلة</a>
+  </div>
+  <a class="btn btn--sm js-wa" href="#order"><span>اطلب الآن</span></a>
+</nav>
+
+<!-- ===== المشهد الافتتاحي ===== -->
+<header class="hero" id="top">
+  <div class="hero__stage">
+    <canvas class="hero__spark" id="spark" aria-hidden="true"></canvas>
+    <p class="hero__brandline" id="brandline"><span class="js-name wordmark">menup</span> · مشوي على اللهب</p>
+
+    <svg class="hero__art" id="art" viewBox="235 150 530 528" role="img" aria-label="برجر يُبنى طبقة فوق طبقة: خبز، لحم، جبن، خضار، صوص، وخبزة سمسم">
+      <defs>
+        <radialGradient id="gShadow"><stop offset="0" stop-color="#000" stop-opacity=".62"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+        <linearGradient id="gBun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EFB463"/><stop offset="1" stop-color="#B96F27"/></linearGradient>
+        <linearGradient id="gBunTop" x1=".2" y1="0" x2=".8" y2="1"><stop offset="0" stop-color="#F6CB80"/><stop offset=".55" stop-color="#E0A04B"/><stop offset="1" stop-color="#B96F27"/></linearGradient>
+        <linearGradient id="gPatty" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7A4423"/><stop offset=".55" stop-color="#4E2713"/><stop offset="1" stop-color="#31170B"/></linearGradient>
+        <linearGradient id="gCheese" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD35C"/><stop offset="1" stop-color="#EF9A22"/></linearGradient>
+        <linearGradient id="gLett" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9AD264"/><stop offset="1" stop-color="#3F7A2A"/></linearGradient>
+        <linearGradient id="gTom" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EE5B44"/><stop offset="1" stop-color="#A9241A"/></linearGradient>
+        <linearGradient id="gSauce" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FCEFD2"/><stop offset="1" stop-color="#EBC489"/></linearGradient>
+        <linearGradient id="gPick" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8FC155"/><stop offset="1" stop-color="#4E7A2A"/></linearGradient>
+        <radialGradient id="gEmber"><stop offset="0" stop-color="#FF7A2A" stop-opacity=".85"/><stop offset=".5" stop-color="#D6402F" stop-opacity=".38"/><stop offset="1" stop-color="#D6402F" stop-opacity="0"/></radialGradient>
+      </defs>
+
+      <!-- الشوّاية: ثابتة من أول لحظة -->
+      <g class="grill">
+        <ellipse class="grill__glow" cx="500" cy="638" rx="258" ry="42" fill="url(#gEmber)"/>
+        <g fill="#F0B23C"><circle cx="344" cy="636" r="3.4" opacity=".7"/><circle cx="412" cy="650" r="2.6" opacity=".55"/><circle cx="486" cy="632" r="3" opacity=".8"/><circle cx="560" cy="648" r="2.4" opacity=".5"/><circle cx="628" cy="634" r="3.2" opacity=".68"/><circle cx="676" cy="648" r="2.2" opacity=".45"/></g>
+        <rect x="266" y="608" width="468" height="11" rx="5.5" fill="#2A1D18"/>
+        <rect x="278" y="626" width="444" height="11" rx="5.5" fill="#221711"/>
+        <rect x="294" y="644" width="412" height="11" rx="5.5" fill="#1B120D"/>
+        <rect x="266" y="608" width="468" height="4" rx="2" fill="#4A3227" opacity=".8"/>
+      </g>
+
+      <ellipse cx="500" cy="600" rx="238" ry="26" fill="url(#gShadow)"/>
+
+      <!-- 1) الخبز السفلي -->
+      <g data-layer="bun-bottom">
+        <path d="M296 538q0-10 16-11h376q16 1 16 11 0 44-204 52-204-8-204-52Z" fill="url(#gBun)"/>
+        <path d="M296 538q0-10 16-11h376q16 1 16 11 0 9-204 13T296 538Z" fill="#F2C378" opacity=".5"/>
+        <path d="M330 566q76 14 170 14t170-14" fill="none" stroke="#8E4E17" stroke-opacity=".35" stroke-width="4" stroke-linecap="round"/>
+      </g>
+
+      <!-- 2) قطعة اللحم -->
+      <g data-layer="patty">
+        <path d="M282 500q0-14 20-16 98-6 198-6t198 6q20 2 20 16 0 28-218 36T282 500Z" fill="url(#gPatty)"/>
+        <path d="M300 490q60-10 200-10t200 10" fill="none" stroke="#9A5E32" stroke-opacity=".55" stroke-width="5" stroke-linecap="round"/>
+        <ellipse cx="392" cy="504" rx="17" ry="6" fill="#1E0D06" opacity=".5"/>
+        <ellipse cx="556" cy="510" rx="22" ry="6" fill="#1E0D06" opacity=".42"/>
+        <ellipse cx="662" cy="500" rx="14" ry="5" fill="#1E0D06" opacity=".45"/>
+      </g>
+
+      <!-- 3) الجبن -->
+      <g data-layer="cheese">
+        <path d="M292 462h416q7 0 6 8l-6 22q-208 14-416 0l-6-22q-1-8 6-8Z" fill="url(#gCheese)"/>
+        <path d="M318 486h28v28a14 14 0 0 1-28 0Z" fill="url(#gCheese)"/>
+        <path d="M468 490h34v36a17 17 0 0 1-34 0Z" fill="url(#gCheese)"/>
+        <path d="M628 486h24v22a12 12 0 0 1-24 0Z" fill="url(#gCheese)"/>
+        <path d="M300 468h400" fill="none" stroke="#FFE9A8" stroke-opacity=".7" stroke-width="4" stroke-linecap="round"/>
+      </g>
+
+      <!-- 4) المخلل -->
+      <g data-layer="pickle">
+        <ellipse cx="382" cy="456" rx="30" ry="9" fill="url(#gPick)"/><ellipse cx="382" cy="454" rx="19" ry="4.5" fill="#C6E39A" opacity=".55"/>
+        <ellipse cx="502" cy="452" rx="30" ry="9" fill="url(#gPick)"/><ellipse cx="502" cy="450" rx="19" ry="4.5" fill="#C6E39A" opacity=".55"/>
+        <ellipse cx="622" cy="456" rx="30" ry="9" fill="url(#gPick)"/><ellipse cx="622" cy="454" rx="19" ry="4.5" fill="#C6E39A" opacity=".55"/>
+      </g>
+
+      <!-- 5) الطماطم -->
+      <g data-layer="tomato">
+        <rect x="294" y="424" width="412" height="28" rx="14" fill="url(#gTom)"/>
+        <rect x="316" y="431" width="368" height="14" rx="7" fill="#F58A72" opacity=".6"/>
+      </g>
+
+      <!-- 6) الخس -->
+      <g data-layer="lettuce"><g transform="translate(0,-12)">
+        <path d="M274 432C268 408 290 396 304 410C316 390 342 390 352 410C364 390 390 390 400 410C412 390 438 390 448 410C460 390 486 390 496 410C508 390 534 390 544 410C556 390 582 390 592 410C604 390 630 390 640 410C652 390 678 390 688 410C702 396 724 408 718 432Q700 444 500 446Q300 444 274 432Z" fill="url(#gLett)"/>
+        <path d="M304 428q98 12 196 12t196-12" fill="none" stroke="#D2EFA8" stroke-opacity=".45" stroke-width="4" stroke-linecap="round"/>
+      </g></g>
+
+      <!-- 7) الصوص -->
+      <g data-layer="sauce">
+        <rect x="298" y="392" width="404" height="18" rx="9" fill="url(#gSauce)"/>
+        <path d="M340 404h24v18a12 12 0 0 1-24 0Z" fill="url(#gSauce)"/>
+        <path d="M456 406h26v22a13 13 0 0 1-26 0Z" fill="url(#gSauce)"/>
+        <path d="M586 404h22v16a11 11 0 0 1-22 0Z" fill="url(#gSauce)"/>
+        <path d="M654 406h24v19a12 12 0 0 1-24 0Z" fill="url(#gSauce)"/>
+      </g>
+
+      <!-- 8) الخبز العلوي -->
+      <g data-layer="bun-top">
+        <path d="M296 386q-4-88 44-138 60-54 160-54t160 54q48 50 44 138 0 12-14 12H310q-14 0-14-12Z" fill="url(#gBunTop)"/>
+        <path d="M352 268q44-46 116-50" fill="none" stroke="#FFE3AE" stroke-opacity=".55" stroke-width="14" stroke-linecap="round"/>
+        <g fill="#FFF3DC" opacity=".92">
+          <ellipse cx="404" cy="286" rx="10" ry="6" transform="rotate(-24 404 286)"/>
+          <ellipse cx="472" cy="252" rx="10" ry="6" transform="rotate(-10 472 252)"/>
+          <ellipse cx="546" cy="248" rx="10" ry="6" transform="rotate(12 546 248)"/>
+          <ellipse cx="612" cy="284" rx="10" ry="6" transform="rotate(26 612 284)"/>
+          <ellipse cx="368" cy="342" rx="10" ry="6" transform="rotate(-8 368 342)"/>
+          <ellipse cx="446" cy="318" rx="10" ry="6" transform="rotate(6 446 318)"/>
+          <ellipse cx="522" cy="330" rx="10" ry="6" transform="rotate(-14 522 330)"/>
+          <ellipse cx="596" cy="322" rx="10" ry="6" transform="rotate(18 596 322)"/>
+          <ellipse cx="656" cy="346" rx="10" ry="6" transform="rotate(4 656 346)"/>
+          <ellipse cx="500" cy="222" rx="10" ry="6"/>
+        </g>
+      </g>
+    </svg>
+
+    <div class="hero__col">
+    <ol class="rail" id="rail" aria-hidden="true"><li></li><li></li><li></li><li></li><li></li><li></li></ol>
+    <!-- بطاقة الافتتاح -->
+    <div class="opener" id="opener">
+      <span class="band__kicker">مكة المكرمة</span>
+      <p class="opener__mark wordmark">menup</p>
+      <p class="opener__sub">برجر يُبنى قدامك، طبقة طبقة. انزل بالسحب وشوف كيف.</p>
+    </div>
+
+    <!-- تعليقات الرحلة -->
+    <div class="band" data-band="0"><span class="band__scrim"></span>
+      <span class="band__kicker">٠١ الأساس</span>
+      <p class="band__line">الخبز يُخبز عندنا كل صباح</p>
+      <p class="band__sub">ولا يمر عليه يوم ثانٍ. اللي ما ينباع اليوم، ما نبيعه بكرة.</p>
+    </div>
+    <div class="band" data-band="1"><span class="band__scrim"></span>
+      <span class="band__kicker">٠٢ اللحم</span>
+      <p class="band__line">لحم طازج، مو مجمد</p>
+      <p class="band__sub">نطحنه ونشكّله كل صباح، ونشويه على اللهب مباشرة.</p>
+    </div>
+    <div class="band" data-band="2"><span class="band__scrim"></span>
+      <span class="band__kicker">٠٣ الجبن</span>
+      <p class="band__line">الجبن يذوب على اللحم نفسه</p>
+      <p class="band__sub">مو فوقه بعد ما يبرد. الفرق تحسه من أول لقمة.</p>
+    </div>
+    <div class="band" data-band="3"><span class="band__scrim"></span>
+      <span class="band__kicker">٠٤ المقرمش</span>
+      <p class="band__line">خضار مقطوع اليوم</p>
+      <p class="band__sub">خس بارد، طماطم ناضجة، ومخلل يعطي الطقة اللي ناقصة.</p>
+    </div>
+    <div class="band" data-band="4"><span class="band__scrim"></span>
+      <span class="band__kicker">٠٥ الصوص</span>
+      <p class="band__line">وسخيّين بالصوص</p>
+      <p class="band__sub">وصفتنا نحن، وما نحسبها بالقطرة.</p>
+    </div>
+    <div class="band" data-band="5"><span class="band__scrim"></span>
+      <span class="band__kicker">٠٦ القفلة</span>
+      <p class="band__line">ونقفلها بخبزة سمسم</p>
+      <p class="band__sub">تطلع لك وهي حارة، وتوصلك وهي حارة.</p>
+    </div>
+
+    <!-- لحظة الاستقرار -->
+    <div class="settle" id="settle">
+      <h1>برجر <em>يستاهل</em> الجوع</h1>
+      <p>لحم يُطحن كل صباح، يُشوى على اللهب، ويوصلك حار. بدون مجمدات وبدون وعود.</p>
+      <div class="settle__row">
+        <a class="btn js-wa" href="#order"><span>اطلب على واتساب</span></a>
+        <a class="btn btn--ghost" href="#menu"><span>شوف المنيو</span></a>
+      </div>
+    </div>
+
+    </div>
+
+    <!-- نسخة الجوال -->
+    <div class="hero__mob">
+      <span class="band__kicker">مكة المكرمة · مشوي على اللهب</span>
+    </div>
+
+    <div class="hint" id="hint"><i></i><span>انزل</span></div>
+  </div>
+</header>
+
+<main class="page">
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track"><span>لحم طازج يومياً</span><span>خبز يُخبز عندنا</span><span>مشوي على اللهب</span><span>يوصلك حار</span><span>لحم طازج يومياً</span><span>خبز يُخبز عندنا</span><span>مشوي على اللهب</span><span>يوصلك حار</span></div>
+    <div class="marquee__track"><span>لحم طازج يومياً</span><span>خبز يُخبز عندنا</span><span>مشوي على اللهب</span><span>يوصلك حار</span><span>لحم طازج يومياً</span><span>خبز يُخبز عندنا</span><span>مشوي على اللهب</span><span>يوصلك حار</span></div>
+  </div>
+
+  <!-- ===== ليش احنا ===== -->
+  <section class="sec" id="why">
+    <div class="wrap">
+      <div class="rise">
+        <span class="eyebrow">ليش احنا</span>
+        <h2>ثلاث شكاوى سمعناها كثير، وحلّيناها</h2>
+        <p class="sec__intro">قرينا كلام الناس عن البرجر في مكة والمنطقة، وطلعت نفس الملاحظات تتكرر. هذي ردنا عليها، وتقدر تجربه بنفسك.</p>
+      </div>
+      <div class="why">
+        <article class="why__card rise">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="30" r="12" fill="none" stroke="#F0B23C" stroke-width="2.4"/>
+            <g stroke="#F0B23C" stroke-width="2.4" stroke-linecap="round"><path d="M32 10v5M32 45v5M12 30h5M47 30h5M18 16l3.5 3.5M42.5 40.5 46 44M46 16l-3.5 3.5M21.5 40.5 18 44"/></g>
+            <path d="M12 50q0-6 8-7 12-1.6 24 0 8 1 8 7 0 6-20 8t-20-8Z" fill="#4E2713"/>
+            <path d="M18 48q14-3 28 0" stroke="#9A5E32" stroke-width="3" fill="none" stroke-linecap="round"/>
+          </svg>
+          <span class="why__was">قالوا: اللحم مجمد</span>
+          <h3>نطحن اللحم كل صباح</h3>
+          <p>اللحم يوصلنا طازج، نطحنه ونشكّله في نفس اليوم. ما عندنا فريزر برجر أصلاً، عندنا ثلاجة تبريد فقط.</p>
+        </article>
+        <article class="why__card rise">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M32 10v38" stroke="#F0B23C" stroke-width="3" stroke-linecap="round"/>
+            <path d="M12 20h40" stroke="#F0B23C" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="32" cy="14" r="3.4" fill="#F0B23C"/>
+            <path d="M12 20 5 36h14ZM52 20l-7 16h14Z" fill="none" stroke="#D6402F" stroke-width="2.6" stroke-linejoin="round"/>
+            <path d="M22 52h20q3 0 3 3H19q0-3 3-3Z" fill="#3E9D86"/>
+          </svg>
+          <span class="why__was">قالوا: الطعم يختلف كل مرة</span>
+          <h3>وصفة واحدة وميزان واحد</h3>
+          <p>وزن اللحم ثابت، وقت الشوي ثابت، وكمية الصوص ثابتة. تجربتك اليوم هي نفسها بعد شهر.</p>
+        </article>
+        <article class="why__card rise">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <g stroke="#D6402F" stroke-width="2.6" fill="none" stroke-linecap="round">
+              <path d="M24 22c0-5 5-5 5-10s-5-5-5-10"/><path d="M32 22c0-5 5-5 5-10s-5-5-5-10"/><path d="M40 22c0-5 5-5 5-10s-5-5-5-10"/>
+            </g>
+            <rect x="14" y="28" width="36" height="24" rx="5" fill="#3E9D86" fill-opacity=".22" stroke="#3E9D86" stroke-width="2.4"/>
+            <path d="M14 36h36" stroke="#3E9D86" stroke-width="2.4"/>
+            <path d="M28 28v-4h8v4" stroke="#3E9D86" stroke-width="2.4" fill="none"/>
+          </svg>
+          <span class="why__was">قالوا: يوصل بارد</span>
+          <h3>علبة تحفظ الحرارة</h3>
+          <p>نغلّف البرجر في علبة عازلة، والبطاطس في كيس منفصل عشان ما تطلع طرية. وطلبك مع سائق واحد فقط.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== المنيو ===== -->
+  <section class="sec" id="menu">
+    <div class="wrap">
+      <div class="rise">
+        <span class="eyebrow">المنيو</span>
+        <h2>قائمة قصيرة، لأن كل صنف فيها نتقنه</h2>
+        <p class="sec__intro">ما عندنا خمسين صنف. عندنا ستة نسويهم كل يوم لين صاروا مضبوطين.</p>
+      </div>
+
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="mini" viewBox="0 0 200 150">
+          <ellipse cx="100" cy="139" rx="60" ry="7" fill="#000" opacity=".38"/>
+          <path d="M44 116q0-7 9-7h94q9 0 9 7 0 13-56 17t-56-17Z" fill="#C88134"/>
+          <path d="M44 116q0-7 9-7h94q9 0 9 7 0 4-56 6t-56-6Z" fill="#E0A75F" opacity=".5"/>
+          <path d="M34 100q0-9 12-10 27-3 54-3t54 3q12 1 12 10 0 11-66 15T34 100Z" fill="var(--c-meat,#3B1C0C)"/>
+          <path d="M46 94q22-5 54-5t54 5" fill="none" stroke="#8A5330" stroke-opacity=".5" stroke-width="4" stroke-linecap="round"/>
+          <path d="M40 82h120q5 0 4 6l-4 10q-60 5-120 0l-4-10q-1-6 4-6Z" fill="var(--c-cheese,#F3AE2E)"/>
+          <path d="M58 96h11v9a5.5 5.5 0 0 1-11 0Z" fill="var(--c-cheese,#F3AE2E)"/>
+          <path d="M96 98h12v11a6 6 0 0 1-12 0Z" fill="var(--c-cheese,#F3AE2E)"/>
+          <path d="M132 96h11v8a5.5 5.5 0 0 1-11 0Z" fill="var(--c-cheese,#F3AE2E)"/>
+          <path d="M38 84C34 72 44 66 52 74C58 64 72 64 78 74C84 64 98 64 104 74C110 64 124 64 130 74C136 64 150 64 156 74C164 66 168 74 162 84Q140 90 100 90Q60 90 38 84Z" fill="var(--c-veg,#5C9A34)"/>
+          <path d="M44 74q0-32 16-48 16-14 40-14t40 14q16 16 16 48 0 5-6 5H50q-6 0-6-5Z" fill="#E0A04B"/>
+          <path d="M66 38q16-18 40-21" fill="none" stroke="#FFE3AE" stroke-opacity=".5" stroke-width="7" stroke-linecap="round"/>
+          <g fill="#FFF3DC" opacity=".92"><ellipse cx="74" cy="44" rx="5" ry="3"/><ellipse cx="102" cy="30" rx="5" ry="3"/><ellipse cx="130" cy="44" rx="5" ry="3"/><ellipse cx="88" cy="60" rx="5" ry="3"/><ellipse cx="118" cy="62" rx="5" ry="3"/><ellipse cx="150" cy="62" rx="5" ry="3"/><ellipse cx="56" cy="62" rx="5" ry="3"/></g>
+        </symbol>
+        <symbol id="fries" viewBox="0 0 200 150">
+          <ellipse cx="100" cy="134" rx="56" ry="8" fill="#000" opacity=".35"/>
+          <g fill="#F0B23C"><rect x="66" y="26" width="13" height="62" rx="5" transform="rotate(-13 72 56)"/><rect x="88" y="16" width="13" height="70" rx="5"/><rect x="110" y="24" width="13" height="64" rx="5" transform="rotate(11 116 56)"/><rect x="76" y="34" width="13" height="56" rx="5" transform="rotate(5 82 62)"/><rect x="100" y="30" width="13" height="58" rx="5" transform="rotate(-6 106 58)"/></g>
+          <path d="M62 70h76l-9 56q-1 8-9 8H80q-8 0-9-8Z" fill="#D6402F"/>
+          <path d="M70 88h60" stroke="#F6ECD9" stroke-opacity=".5" stroke-width="5" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="shake" viewBox="0 0 200 150">
+          <ellipse cx="100" cy="136" rx="46" ry="7" fill="#000" opacity=".35"/>
+          <path d="M74 52h52l-7 76q-1 8-9 8H90q-8 0-9-8Z" fill="#F6ECD9" fill-opacity=".92"/>
+          <path d="M74 52h52l-2 22H76Z" fill="#C98A4B"/>
+          <path d="M72 46q28-24 56 0 6 5-4 6H76q-10-1-4-6Z" fill="#FFF3DC"/>
+          <rect x="112" y="8" width="9" height="44" rx="4" transform="rotate(12 116 30)" fill="#D6402F"/>
+          <circle cx="100" cy="38" r="7" fill="#D6402F"/>
+        </symbol>
+      </svg>
+
+      <div class="menu">
+        <article class="item rise">
+          <div class="item__art"><span class="item__tag">الأكثر طلباً</span><svg viewBox="0 0 200 150"><use href="#mini"/></svg></div>
+          <div class="item__body"><h3>الكلاسيكي من menup</h3><p>قطعة لحم ١٥٠ جرام، جبن شيدر ذائب، خس وطماطم ومخلل، وصوص menup.</p>
+            <div class="item__foot"><span class="price">٢٩ <small>ر.س</small></span><a class="btn btn--sm js-wa-item" href="#order" data-item="الكلاسيكي من menup"><span>أضف</span></a></div></div>
+        </article>
+
+        <article class="item rise">
+          <div class="item__art"><span class="item__tag item__tag--mint">مضاعف</span><svg viewBox="0 0 200 150" style="--c-cheese:#FFC94D"><use href="#mini"/></svg></div>
+          <div class="item__body"><h3>دبل تشيز على اللهب</h3><p>قطعتان لحم، أربع شرائح جبن تذوب على اللحم مباشرة، بصل مكرمل.</p>
+            <div class="item__foot"><span class="price">٤٢ <small>ر.س</small></span><a class="btn btn--sm js-wa-item" href="#order" data-item="دبل تشيز على اللهب"><span>أضف</span></a></div></div>
+        </article>
+
+        <article class="item rise">
+          <div class="item__art"><span class="item__tag">حار</span><svg viewBox="0 0 200 150" style="--c-cheese:#D6402F;--c-veg:#3E9D86"><use href="#mini"/></svg></div>
+          <div class="item__body"><h3>سبايسي بافلو</h3><p>لحم مغموس بصوص البافلو، هالبينو طازج، وصوص رانش يهدّي الحرارة.</p>
+            <div class="item__foot"><span class="price">٣٥ <small>ر.س</small></span><a class="btn btn--sm js-wa-item" href="#order" data-item="سبايسي بافلو"><span>أضف</span></a></div></div>
+        </article>
+
+        <article class="item rise">
+          <div class="item__art"><svg viewBox="0 0 200 150" style="--c-meat:#C98A4B;--c-cheese:#F0B23C;--c-veg:#7FA83C"><use href="#mini"/></svg></div>
+          <div class="item__body"><h3>دجاج مقرمش بالعسل الحار</h3><p>صدر دجاج مغطى بخلطتنا، مقلي لحظة الطلب، وعسل حار فوقه.</p>
+            <div class="item__foot"><span class="price">٣٢ <small>ر.س</small></span><a class="btn btn--sm js-wa-item" href="#order" data-item="دجاج مقرمش بالعسل الحار"><span>أضف</span></a></div></div>
+        </article>
+
+        <article class="item rise">
+          <div class="item__art"><svg viewBox="0 0 200 150"><use href="#fries"/></svg></div>
+          <div class="item__body"><h3>بطاطس menup بالجبن</h3><p>مقلية مرتين عشان تبقى مقرمشة لين توصلك، وفوقها جبن سائل وبهارنا.</p>
+            <div class="item__foot"><span class="price">١٨ <small>ر.س</small></span><a class="btn btn--sm js-wa-item" href="#order" data-item="بطاطس menup بالجبن"><span>أضف</span></a></div></div>
+        </article>
+
+        <article class="item rise">
+          <div class="item__art"><svg viewBox="0 0 200 150"><use href="#shake"/></svg></div>
+          <div class="item__body"><h3>ميلك شيك تمر ومكسرات</h3><p>تمر سكري، حليب طازج، وقشطة. حلا ومشروب في نفس الوقت.</p>
+            <div class="item__foot"><span class="price">٢١ <small>ر.س</small></span><a class="btn btn--sm js-wa-item" href="#order" data-item="ميلك شيك تمر ومكسرات"><span>أضف</span></a></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ابنِ برجرك ===== -->
+  <section class="sec" id="build">
+    <div class="wrap">
+      <div class="rise">
+        <span class="eyebrow">جرّبها بنفسك</span>
+        <h2>ابنِ برجرك، وشوف السعر يتحرك</h2>
+        <p class="sec__intro">اضغط على الإضافات وشوفها تنزل على البرجر. لما تعجبك، أرسلها لنا على واتساب بضغطة.</p>
+      </div>
+
+      <div class="build">
+        <div class="build__stage rise">
+          <svg viewBox="0 -46 200 250" id="bstage" aria-label="برجر يتغير حسب اختياراتك">
+            <ellipse cx="100" cy="186" rx="62" ry="8" fill="#000" opacity=".4"/>
+            <text id="bhint" x="100" y="-12" text-anchor="middle">أضف طبقاتك</text>
+            <path d="M44 158q0-7 9-7h94q9 0 9 7 0 14-56 18t-56-18Z" fill="#C88134"/>
+            <path d="M44 158q0-7 9-7h94q9 0 9 7 0 4-56 6t-56-6Z" fill="#E0A75F" opacity=".5"/>
+            <path d="M34 142q0-9 12-10 27-3 54-3t54 3q12 1 12 10 0 11-66 15T34 142Z" fill="#3B1C0C"/>
+            <path d="M46 136q22-5 54-5t54 5" fill="none" stroke="#8A5330" stroke-opacity=".5" stroke-width="4" stroke-linecap="round"/>
+            <path d="M38 126C34 114 44 108 52 116C58 106 72 106 78 116C84 106 98 106 104 116C110 106 124 106 130 116C136 106 150 106 156 116C164 108 168 116 162 126Q140 132 100 132Q60 132 38 126Z" fill="#5C9A34"/>
+
+            <g data-b="patty2"><rect x="38" y="0" width="124" height="24" rx="11" fill="#5A2E17"/><path d="M50 7q50-5 100 0" fill="none" stroke="#8A5330" stroke-opacity=".55" stroke-width="4" stroke-linecap="round"/></g>
+            <g data-b="cheese"><path d="M40 0h120q5 0 4 6l-4 7q-60 5-120 0l-4-7q-1-6 4-6Z" fill="#F3AE2E"/><path d="M58 11h11v9a5.5 5.5 0 0 1-11 0Z" fill="#F3AE2E"/><path d="M130 11h11v8a5.5 5.5 0 0 1-11 0Z" fill="#F3AE2E"/></g>
+            <g data-b="smoked"><path d="M46 5q14-6 28 0t28 0 28 0 24 0" fill="none" stroke="#9E3A28" stroke-width="9" stroke-linecap="round"/></g>
+            <g data-b="onion"><ellipse cx="72" cy="6" rx="21" ry="6" fill="none" stroke="#E7B769" stroke-width="4"/><ellipse cx="128" cy="6" rx="21" ry="6" fill="none" stroke="#E7B769" stroke-width="4"/></g>
+            <g data-b="pickle"><ellipse cx="74" cy="5" rx="17" ry="5" fill="#6F9E3B"/><ellipse cx="126" cy="5" rx="17" ry="5" fill="#6F9E3B"/></g>
+            <g data-b="hot"><rect x="44" y="0" width="112" height="9" rx="4.5" fill="#D6402F"/></g>
+
+            <g id="btop">
+              <path d="M44 118q0-34 16-50 16-16 40-16t40 16q16 16 16 50 0 5-6 5H50q-6 0-6-5Z" fill="#E0A04B"/>
+              <path d="M66 82q16-18 40-21" fill="none" stroke="#FFE3AE" stroke-opacity=".5" stroke-width="8" stroke-linecap="round"/>
+              <g fill="#FFF3DC" opacity=".92"><ellipse cx="74" cy="88" rx="5" ry="3"/><ellipse cx="102" cy="74" rx="5" ry="3"/><ellipse cx="130" cy="88" rx="5" ry="3"/><ellipse cx="88" cy="104" rx="5" ry="3"/><ellipse cx="118" cy="106" rx="5" ry="3"/><ellipse cx="56" cy="106" rx="5" ry="3"/><ellipse cx="150" cy="104" rx="5" ry="3"/></g>
+            </g>
+          </svg>
+        </div>
+
+        <div class="rise">
+          <p class="sec__intro" style="margin:0">الأساس: خبز سمسم، قطعة لحم طازجة، خس وطماطم. <b class="price" style="font-size:1rem">٢٥ ر.س</b></p>
+          <div class="opts" id="opts">
+            <button class="opt" data-label="جبن شيدر" data-b="cheese" data-p="5"><i></i>جبن شيدر <span class="mono">+٥</span></button>
+            <button class="opt" data-label="لحم إضافي" data-b="patty2" data-p="12"><i></i>لحم إضافي <span class="mono">+١٢</span></button>
+            <button class="opt" data-label="لحم مدخّن" data-b="smoked" data-p="8"><i></i>لحم مدخّن <span class="mono">+٨</span></button>
+            <button class="opt" data-label="حلقات بصل" data-b="onion" data-p="6"><i></i>حلقات بصل <span class="mono">+٦</span></button>
+            <button class="opt" data-label="مخلل" data-b="pickle" data-p="0"><i></i>مخلل <span class="mono">+٠</span></button>
+            <button class="opt" data-label="صوص حار" data-b="hot" data-p="3"><i></i>صوص حار <span class="mono">+٣</span></button>
+          </div>
+          <div class="total"><span>المجموع</span><b id="total">٢٥</b><span>ريال</span></div>
+          <p class="form__note" style="margin-block-start:14px">السعر تقديري ويتأكد وقت الطلب.</p>
+          <a class="btn js-wa-build" href="#order" style="margin-block-start:18px"><span>أرسل هذا البرجر على واتساب</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== الإثبات ===== -->
+  <section class="sec" id="proof">
+    <div class="wrap">
+      <div class="rise">
+        <span class="eyebrow">الناس تقول</span>
+        <h2>الطعم يتكلم، وهم قالوا</h2>
+      </div>
+      <div class="stats">
+        <div class="stat rise"><b data-count="7">٠</b><span>سنوات على نفس الوصفة</span></div>
+        <div class="stat rise"><b data-count="320">٠</b><span>برجر يُشكّل كل صباح</span></div>
+        <div class="stat rise"><b data-count="9">٠</b><span>دقائق متوسط التحضير</span></div>
+        <div class="stat rise"><b data-count="0" data-fixed="٤٫٧">٠</b><span>تقييم الزبائن من ٥</span></div>
+      </div>
+      <div class="says">
+        <blockquote class="say rise"><span class="stars">★★★★★</span><p>«جربت برجرات كثيرة، وهذا أول واحد يوصلني حار فعلاً. اللحم يبان طازج من أول قضمة.»</p><footer><i></i><span>عبدالله، طلب توصيل</span></footer></blockquote>
+        <blockquote class="say rise"><span class="stars">★★★★★</span><p>«أطلب منهم كل أسبوع تقريباً، والطعم ما تغيّر ولا مرة. هذي أصعب شي في المطاعم.»</p><footer><i></i><span>ريم، زبونة دائمة</span></footer></blockquote>
+        <blockquote class="say rise"><span class="stars">★★★★☆</span><p>«السعر أعلى شوي من غيرهم، لكن الكمية والجودة تفرق. صرت أطلب مرة وحدة بدل مرتين.»</p><footer><i></i><span>فهد، أول طلب</span></footer></blockquote>
+      </div>
+      <p class="form__note rise" style="margin-block-start:20px">هذه آراء توضيحية مؤقتة حتى نضع تقييماتكم الحقيقية من قوقل مابس.</p>
+    </div>
+  </section>
+
+  <!-- ===== كيف تطلب ===== -->
+  <section class="sec" id="how">
+    <div class="wrap">
+      <div class="rise">
+        <span class="eyebrow">كيف تطلب</span>
+        <h2>ثلاث خطوات، وأقل من عشر دقائق</h2>
+      </div>
+      <div class="steps">
+        <svg class="thread" id="thread" viewBox="0 0 1000 2" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M0 1H1000"/></svg>
+        <div class="step rise"><b>الخطوة ٠١</b><h3>اختر طلبك</h3><p>من المنيو فوق، أو ابنِ برجرك بنفسك واحصل على السعر مباشرة.</p></div>
+        <div class="step rise"><b>الخطوة ٠٢</b><h3>أرسلها على واتساب</h3><p>تنفتح لك محادثة واتساب والرسالة مكتوبة جاهزة. تضغط إرسال فقط.</p></div>
+        <div class="step rise"><b>الخطوة ٠٣</b><h3>استلمه حار</h3><p>نبدأ التحضير لحظة التأكيد. تستلم من المحل أو يوصلك السائق.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== الأسئلة ===== -->
+  <section class="sec" id="faq">
+    <div class="wrap">
+      <div class="rise">
+        <span class="eyebrow">أسئلة صريحة</span>
+        <h2>الأسئلة اللي تجينا كل يوم</h2>
+      </div>
+      <div class="faq" id="faq-list">
+        <div class="qa"><button class="qa__q" type="button">ليش سعركم أعلى من الوجبات السريعة؟<i></i></button><div class="qa__a"><div><p>لأن اللحم يوصلنا طازج كل يوم ويُطحن عندنا، والخبز يُخبز في المحل. هذي تكلفتها أعلى من المجمد الجاهز. الفرق تحسه في الحجم والطعم، ومعظم الناس يطلبون وجبة وحدة بدل اثنتين.</p></div></div></div>
+        <div class="qa"><button class="qa__q" type="button">اللحم حلال ومن وين؟<i></i></button><div class="qa__a"><div><p>نعم، لحم بقري حلال معتمد من مورد محلي، ونستلمه مبرداً كل يوم لا مجمداً. شهادات المورد موجودة في المحل ونعرضها لأي زبون يطلبها.</p></div></div></div>
+        <div class="qa"><button class="qa__q" type="button">الطلب يوصل بارد؟<i></i></button><div class="qa__a"><div><p>نغلّف البرجر في علبة عازلة تحفظ الحرارة، والبطاطس في كيس مثقّب منفصل عشان البخار ما يطريها. وسائق التوصيل يأخذ طلبك وحده، ما يجمع طلبات مع بعض.</p></div></div></div>
+        <div class="qa"><button class="qa__q" type="button">عندكم خيار نباتي؟<i></i></button><div class="qa__a"><div><p>عندنا برجر بقطعة خضار مشوية بنفس الخبز والصوصات، ويُحضّر على شواية منفصلة. اطلبه على واتساب واذكر «نباتي» في رسالتك.</p></div></div></div>
+        <div class="qa"><button class="qa__q" type="button">كم أنتظر الطلب؟<i></i></button><div class="qa__a"><div><p>متوسط التحضير تسع دقائق لأننا نبدأ الشوي بعد تأكيد طلبك، مو قبل. في أوقات الذروة يوصل إلى خمس عشرة دقيقة، ونخبرك بالوقت الحقيقي قبل ما نبدأ.</p></div></div></div>
+        <div class="qa"><button class="qa__q" type="button">تستقبلون طلبات المناسبات؟<i></i></button><div class="qa__a"><div><p>نعم، من عشرين وجبة فما فوق. راسلنا قبل يوم على الأقل ونجهز لك عرض سعر ووقت تسليم مضبوط.</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== الفروع ===== -->
+  <section class="sec" id="spots">
+    <div class="wrap">
+      <div class="rise">
+        <span class="eyebrow">وين تلقانا</span>
+        <h2>في قلب مكة، وقريب منك</h2>
+      </div>
+      <div class="spots">
+        <article class="spot rise">
+          <span class="open-dot" id="openNow">نتحقق من وقت العمل…</span>
+          <h3 class="js-branch">فرع العزيزية</h3>
+          <dl>
+            <dt>العنوان</dt><dd class="js-address">شارع الحج، حي العزيزية، مكة المكرمة</dd>
+            <dt>الأوقات</dt><dd class="js-hours">يومياً من ١٢ ظهراً إلى ٢ بعد منتصف الليل</dd>
+            <dt>الجوال</dt><dd><a class="js-phone-text" href="#">٠٥٠ ٠٠٠ ٠٠٠٠</a></dd>
+          </dl>
+          <a class="btn btn--sm btn--ghost js-map" href="#" target="_blank" rel="noopener"><span>افتح في الخرائط</span></a>
+        </article>
+        <article class="spot rise">
+          <h3>التوصيل</h3>
+          <dl>
+            <dt>النطاق</dt><dd>العزيزية، الششة، الشرائع، العوالي، والنسيم. ونوصل لفنادق مكة حسب المسافة.</dd>
+            <dt>الرسوم</dt><dd>١٥ ريال داخل النطاق، مجاناً فوق ١٠٠ ريال</dd>
+            <dt>الوقت</dt><dd>من ٢٥ إلى ٤٠ دقيقة حسب موقعك</dd>
+          </dl>
+        </article>
+        <article class="spot rise">
+          <h3>تابعنا</h3>
+          <dl>
+            <dt>انستقرام</dt><dd><a class="js-ig" href="#" target="_blank" rel="noopener">@burger</a></dd>
+            <dt>تيك توك</dt><dd><a class="js-tt" href="#" target="_blank" rel="noopener">@burger</a></dd>
+            <dt>واتساب</dt><dd><a class="js-wa" href="#">اطلب مباشرة</a></dd>
+          </dl>
+          <p class="form__note">ننشر الأصناف الجديدة وأوقات الذروة أول شي على الانستقرام.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== الطلب ===== -->
+  <section class="sec order" id="order">
+    <div class="wrap">
+      <div class="order__grid">
+        <div class="rise">
+          <span class="eyebrow">اطلب الآن</span>
+          <h2>عبّي طلبك، ونجهّزه من دقيقة ما توصلنا</h2>
+          <p class="sec__intro">اكتب طلبك هنا واضغط الزر. بتنفتح لك محادثة واتساب والرسالة مكتوبة كاملة، تضغط إرسال وخلاص. ما نحتاج منك حساب ولا تسجيل.</p>
+          <p class="form__note" style="margin-block-start:18px">رسالتك تروح مباشرة لجوال المحل على واتساب. ما نخزّن بياناتك على الموقع ولا نرسلها لأي طرف ثاني.</p>
+        </div>
+
+        <form class="form rise" id="orderForm" novalidate>
+          <div class="field"><label for="f-name">الاسم</label><input id="f-name" name="name" type="text" autocomplete="name" placeholder="اسمك الكريم" required></div>
+          <div class="field"><label for="f-phone">رقم الجوال</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="05XXXXXXXX" required></div>
+          <div class="field"><label for="f-type">نوع الطلب</label>
+            <select id="f-type" name="type"><option>توصيل</option><option>استلام من المحل</option><option>طلب مناسبة</option></select>
+          </div>
+          <div class="field"><label for="f-order">طلبك</label><textarea id="f-order" name="order" placeholder="مثال: دبل تشيز + بطاطس بالجبن + شيك تمر" required></textarea></div>
+          <button class="btn" type="submit"><span>افتح واتساب بالطلب</span></button>
+          <p class="form__ok" id="formOk" role="status"></p>
+          <p class="form__note">لو ما انفتح واتساب عندك، اتصل مباشرة على <a class="js-phone-text" href="#" style="color:var(--gold)">رقم المحل</a>.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot__grid">
+    <div>
+      <h4 class="js-name wordmark">menup</h4>
+      <p class="form__note">برجر مكة الطازج. لحم يُطحن كل صباح، يُشوى على اللهب، ويوصلك حار.</p>
+    </div>
+    <div><h4>الموقع</h4><a href="#menu">المنيو</a><a href="#why">ليش احنا</a><a href="#build">ابنِ برجرك</a><a href="#faq">أسئلة</a></div>
+    <div><h4>تواصل</h4><a class="js-wa" href="#">واتساب</a><a class="js-phone-text" href="#">اتصال</a><a class="js-ig" href="#" target="_blank" rel="noopener">انستقرام</a><a class="js-map" href="#" target="_blank" rel="noopener">الخرائط</a></div>
+    <div><h4>الأوقات</h4><p class="form__note js-hours">يومياً من ١٢ ظهراً إلى ٢ بعد منتصف الليل</p></div>
+  </div>
+  <div class="foot__end">
+    <span>© <span id="year">٢٠٢٦</span> <span class="js-name wordmark">menup</span>. كل الحقوق محفوظة.</span>
+    <span>الأسعار والعنوان ورقم الجوال وأوقات العمل بيانات مبدئية للعرض فقط، تُستبدل ببيانات المحل الحقيقية. كل الرسوم في الموقع مرسومة بالكود، وليست صوراً حقيقية.</span>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
